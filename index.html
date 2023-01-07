@@ -13,21 +13,32 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
+      <select id="city">
         <option value="">Select a city</option>
-        <option value="">London</option>
-        <option value="">New York</option>
-        <option value="">Buenos Aires</option>
+        <option value="Europe/London">London</option>
+        <option value="America/New_York">New York</option>
+        <option
+          value="America/Buenos_Aires
+"
+        >
+          Buenos Aires
+        </option>
       </select>
-      <div class="city">
-        <div>
-          <h2 id="place">Ushuaia🇦🇷</h2>
-          <div class="date">December 23rd 2022</div>
+      <div id="cities">
+        <div class="city" id="ushuaia">
+          <div>
+            <h2>Ushuaia🇦🇷</h2>
+            <div class="date">December 23rdf 2022</div>
+          </div>
+          <div class="time">20:41 <small> pm</small></div>
         </div>
-        <div class="time">20:41 <small> pm</small></div>
-        <!-- <h2>Paris🇫🇷</h2>
-        <div class="date">December 23rd 2022</div>
-        <div class="time">20:41 <small> pm</small></div> -->
+        <div class="city" id="malaga">
+          <div>
+            <h2>Malaga🇪🇸</h2>
+            <div class="date">December 23rdf 2022</div>
+          </div>
+          <div class="time">20:41 <small> pm</small></div>
+        </div>
       </div>
     </div>
     <footer>This project was coded by <strong>Lu Peralta</strong></footer>
