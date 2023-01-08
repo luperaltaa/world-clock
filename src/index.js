@@ -22,7 +22,7 @@ function updateCity(event) {
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
-  let cityName = cityTimeZone.replace("_", "").split("/")[1];
+  let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
 
@@ -34,7 +34,28 @@ function updateCity(event) {
         <div class="time">${cityTime.format(
           "h:mm:ss"
         )}<small> ${cityTime.format("A")}</small></div>
-      </div>`;
+      </div>
+      <a id="home" href="">Home</a>
+      `;
+  let home = citiesElement.querySelector("#home");
+  home.addEventListener("click", returnHome);
+}
+function returnHome() {
+  let citiesElement = document.querySelector("#cities");
+  citiesElement = `<div class="city" id="ushuaia">
+          <div>
+            <h2>Ushuaia🇦🇷</h2>
+            <div class="date">December 23rdf 2022</div>
+          </div>
+          <div class="time">20:41 <small> pm</small></div>
+        </div>
+        <div class="city" id="malaga">
+          <div>
+            <h2>Malaga🇪🇸</h2>
+            <div class="date">December 23rdf 2022</div>
+          </div>
+          <div class="time">20:41 <small> pm</small></div>
+        </div>`;
 }
 
 updateUshuaiaTime();
